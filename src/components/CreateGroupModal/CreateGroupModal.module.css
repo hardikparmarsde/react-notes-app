@@ -5,6 +5,7 @@
   display: grid;
   place-items: center;
   z-index: 50;
+  padding: 18px;
 }
 
 .modal {
@@ -13,6 +14,8 @@
   border-radius: 8px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
   padding: 22px 34px 22px;
+  max-height: calc(100vh - 36px);
+  overflow: auto;
 }
 
 .title {
@@ -52,6 +55,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .colorDot {
@@ -87,5 +91,35 @@
 .createBtn:disabled {
   opacity: 0.6;
   cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .modal {
+    width: 100%;
+    padding: 18px 18px 16px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+    align-items: start;
+    gap: 10px;
+  }
+
+  .label {
+    font-size: 16px;
+  }
+
+  .input {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .footer {
+    justify-content: flex-end;
+  }
 }
 

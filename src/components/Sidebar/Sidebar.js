@@ -19,6 +19,7 @@ export function Sidebar({
   onOpenCreateGroup,
   onDeleteGroup,
   onDeleteAllGroups,
+  isMobile = false,
 }) {
   return (
     <aside className={styles.sidebar}>
@@ -38,6 +39,15 @@ export function Sidebar({
       </div>
 
       <div className={styles.groups}>
+        {isMobile && groups.length === 0 ? (
+          <div className={styles.emptyState} aria-hidden="true">
+            <img
+              className={styles.emptyImg}
+              src={`${process.env.PUBLIC_URL}/home-illustration.svg`}
+              alt=""
+            />
+          </div>
+        ) : null}
         {groups.map((group) => {
           const isActive = group.id === activeGroupId;
           return (

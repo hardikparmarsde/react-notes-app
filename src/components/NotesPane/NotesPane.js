@@ -66,7 +66,7 @@ export function NotesPane({
         <div className={styles.illustrationWrap} aria-hidden="true">
           <img
             className={styles.illustrationImg}
-            src="/home-illustration.svg"
+            src={`${process.env.PUBLIC_URL}/home-illustration.svg`}
             alt=""
             draggable="false"
           />

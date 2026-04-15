@@ -41,6 +41,19 @@
   padding: 6px 10px 90px;
 }
 
+.emptyState {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  padding: 28px 0 0;
+}
+
+.emptyImg {
+  width: min(320px, 85%);
+  height: auto;
+  opacity: 0.95;
+}
+
 .groupRow {
   width: 100%;
   display: flex;
@@ -154,6 +167,21 @@
 
   .deleteGroupBtn {
     opacity: 1;
+  }
+
+  .groups {
+    min-height: calc(100vh - 98px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .emptyState {
+    flex: 1 1 auto;
+  }
+
+  .groupRow {
+    align-self: stretch;
   }
 }
 

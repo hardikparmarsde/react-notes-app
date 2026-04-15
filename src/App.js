@@ -215,6 +215,7 @@ function AppInner() {
           onOpenCreateGroup={() => setIsCreateGroupOpen(true)}
           onDeleteGroup={handleDeleteGroup}
           onDeleteAllGroups={handleDeleteAllGroups}
+          isMobile={isMobile}
         />
       )}
 
