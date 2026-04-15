@@ -1,0 +1,14 @@
+.app {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  background: #f6f7fb;
+}
+
+@media (max-width: 768px) {
+  .app {
+    display: block;
+  }
+}
+

@@ -1,0 +1,159 @@
+.sidebar {
+  background: #ffffff;
+  height: 100vh;
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: auto;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: #ffffff;
+  font-weight: 700;
+  font-size: 28px;
+  padding: 28px 26px 18px;
+  letter-spacing: 0.2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.clearBtn {
+  border: none;
+  background: transparent;
+  color: rgba(0, 0, 0, 0.55);
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 8px;
+}
+
+.clearBtn:hover {
+  background: rgba(0, 0, 0, 0.06);
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.groups {
+  overflow: visible;
+  padding: 6px 10px 90px;
+}
+
+.groupRow {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 14px;
+  background: transparent;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.groupRow:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.groupBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+}
+
+.rightActions {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.deleteGroupBtn {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.4);
+  display: grid;
+  place-items: center;
+  opacity: 0;
+}
+
+.groupRow:hover .deleteGroupBtn {
+  opacity: 1;
+}
+
+.deleteGroupBtn:active {
+  transform: translateY(1px);
+}
+
+.trashIcon {
+  width: 18px;
+  height: 18px;
+}
+
+.active {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 16px;
+  flex: 0 0 auto;
+  text-transform: uppercase;
+}
+
+.groupName {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1b1b1b;
+}
+
+.fab {
+  position: absolute;
+  right: 26px;
+  bottom: 26px;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: none;
+  background: #16008b;
+  color: #ffffff;
+  font-size: 44px;
+  line-height: 72px;
+  cursor: pointer;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+.fab:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 768px) {
+  .fab {
+    position: fixed;
+    left: auto;
+    right: 22px;
+    bottom: 22px;
+    z-index: 3;
+  }
+
+  .deleteGroupBtn {
+    opacity: 1;
+  }
+}
+

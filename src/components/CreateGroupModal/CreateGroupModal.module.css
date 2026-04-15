@@ -1,0 +1,91 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: grid;
+  place-items: center;
+  z-index: 50;
+}
+
+.modal {
+  width: min(720px, calc(100vw - 48px));
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  padding: 22px 34px 22px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 16px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  align-items: center;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.label {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.input {
+  height: 44px;
+  border: 2px solid rgba(0, 0, 0, 0.18);
+  border-radius: 24px;
+  padding: 0 16px;
+  font-size: 16px;
+  outline: none;
+  max-width: 360px;
+}
+
+.input::placeholder {
+  color: rgba(0, 0, 0, 0.35);
+}
+
+.colors {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.colorDot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.selected {
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 18px;
+}
+
+.createBtn {
+  width: 120px;
+  height: 36px;
+  border-radius: 6px;
+  border: none;
+  background: #001f8b;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.createBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
